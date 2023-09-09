@@ -8,6 +8,7 @@ require (
 	sentry-picam/broker v0.0.0-00010101000000-000000000000
 	sentry-picam/helper v0.0.0-00010101000000-000000000000
 	sentry-picam/raspivid v0.0.0-00010101000000-000000000000
+	sentry-picam/libcamera v0.0.0-00010101000000-000000000000
 )
 
 require github.com/ricochet2200/go-disk-usage/du v0.0.0-20210707232629-ac9918953285 // indirect
@@ -17,3 +18,5 @@ replace sentry-picam/broker => ./pkg/broker
 replace sentry-picam/helper => ./pkg/helper
 
 replace sentry-picam/raspivid => ./pkg/raspivid
+
+replace sentry-picam/libcamera => ./pkg/libcamera

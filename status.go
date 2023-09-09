@@ -3,11 +3,11 @@ package main
 import (
 	"encoding/json"
 	"net/http"
-	"sentry-picam/raspivid"
+	"sentry-picam/libcamera"
 )
 
 type Status struct {
-	Recorder *raspivid.Recorder
+	Recorder *libcamera.Recorder
 }
 
 func (rec *Status) handleStatus(w http.ResponseWriter, r *http.Request) {

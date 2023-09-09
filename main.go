@@ -17,7 +17,7 @@ import (
 
 	"sentry-picam/broker"
 	h "sentry-picam/helper"
-	"sentry-picam/raspivid"
+	"sentry-picam/libcamera"
 
 	"github.com/gorilla/mux"
 	"github.com/gorilla/websocket"
@@ -31,10 +31,10 @@ const ProductVersion = "0.7.4"
 
 var clients = make(map[*websocket.Conn]bool)
 var clientsMotion = make(map[*websocket.Conn]bool)
-var camera raspivid.Camera
-var motion raspivid.Motion
+var camera libcamera.Camera
+var motion libcamera.Motion
 
-var recorder raspivid.Recorder
+var recorder libcamera.Recorder
 
 //go:embed www
 var staticAssets embed.FS
